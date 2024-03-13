@@ -1,0 +1,63 @@
+Tasmota and Berry - Not just for Home Automation
+1. Overview
+Tasmota logo
+Tasmota is an open source firmware for Espressif ESP8266, ESP32, ESP32-S or ESP32-C3 chipset based devices created and maintained by Theo Arends.
+
+Everything began as Sonoff-MQTT-OTA with a commit on 25th January 2016, by Theo Arends. Its goal was to provide ESP8266 based ITEAD Sonoff devices with MQTT and 'Over the Air' or OTA firmware.
+
+What started as a simple way to hack a cloud bound Sonoff Basic (one of the first cheap and accessible smart home devices in the market) into a locally controlled device has grown into a fully fledged ecosystem for virtually any ESP8266/ESP32 based device.
+
+ESP32 SOC
+The ESP32 series of processor by Expressif are a substantial improvement on the ESP8266
+The ESP32 range are based on either the Xtensa® 32-bit LX6 or RISC-V microprocessor 
+
+ESP32 - Dual Core 240MHz Xtensa Wifi and Bluetooth
+ESP32S2 - Single Core 240MHz Xtensa
+ESP32S3 - Dual Core 240MHz Xtensa 
+etc
+
+The SOC incorporates many GPIOs and subsystems
+TABLE
+
+Tasmota Subsystems on ESP32
+- Wifi 2.4G
+- Web Interface
+- MQTT
+- Drivers for many peripherals
+- Logging
+- Simple Rule Engine shared with the ESP8266
+- File system 320kB total
+- Berry Interpreter
+
+Simple web based installer via serial link. Some devices are easier to get the serial port than others
+
+Berry
+Berry is a ultra-lightweight dynamically typed embedded scripting language. It is designed for lower-performance embedded devices. The Berry interpreter-core’s code size is less than 40KiB and can run on less than 4KiB heap (on ARM Cortex M4 CPU, Thumb ISA and ARMCC compiler).
+
+The Berry interpreter includes a one-pass bytecode compiler and register-based VM, all the code is written in ANSI C99.
+Types
+Classes
+
+Libraries
+String
+Math
+JSON
+
+Tasmota Interface
+Filesystem
+persistent data
+IO as configured lights/relays and switches
+MQTT 
+Web client
+Web Server
+TCP/UDP IO
+ULP
+Crypto
+Driver support
+
+Tasmota event loop polls configured devices
+Rule triggers
+
+
+
+

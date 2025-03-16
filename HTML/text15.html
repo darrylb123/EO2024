@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 16</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text14.html">Back</a> <a href="text16.html">Continue</a> <a href="text20.html">Last page</a> <a href="EO2024-Tasmota+Berry.html">Overview</a> <a href="img15.html">Image</a></center><br>
+<h1>Driver with fast_loop</h1>
+<p>class my_driver</p>
+<p>def every_100ms()</p>
+<p>    # called every 100ms via normal way</p>
+<p>  end</p>
+<p>  def fast_loop()</p>
+<p>    # called at each iteration, and needs to be registered separately and explicitly</p>
+<p>  end</p>
+<p>  def init()</p>
+<p>    # register fast_loop method</p>
+<p>    tasmota.add_fast_loop(/-&gt; self.fast_loop())</p>
+<p>   </p>
+<p>  end</p>
+<p>end</p>
+<p>tasmota.add_driver(my_driver())                     # register driver</p>
+<br>
+<h3>Notes:</h3>
+<p>Example from the documentation showing the overridden every_100ms() method</p>
+<p>The Fast_loop() is added in the class init() method</p>
+<p>The / arrow is the creation of a closure, in Berry a closure is best explained as a synthetic function pointer.</p>
+</body>
+</html>

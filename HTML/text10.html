@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 11</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text9.html">Back</a> <a href="text11.html">Continue</a> <a href="text20.html">Last page</a> <a href="EO2024-Tasmota+Berry.html">Overview</a> <a href="img10.html">Image</a></center><br>
+<h1>Program Execution</h1>
+<ul>
+<li>Berry programs in the file-system<font color="#009BDD"> </font>can be executed:</li>
+<ul>
+<li>by the load() function from the Berry console</li>
+<li>Run at startup if named ‘autoexec.be’ which can then load() other files.</li>
+<li>From the Tasmota console using the ‘br’ command</li>
+<li>From a tasmota rule
+</li>
+</ul>
+<li>
+</li>
+</ul>
+<p>ON Time#Minute=0 DO br load(“midnight.be”) ENDON</p>
+<p>ON DS18B20#Temperature&lt;10 </p>
+<p>	DO WEBSEND[192.168.10.3] br load(“TooCold.be”)</p>
+<br>
+<h3>Notes:</h3>
+<p>The load() function looks for that filename or with a .be extension, loads and executes. </p>
+<p>If the program has not been loaded previously, it is compiled to bytecode then executed. The bytecode is stored as the filename with a .bec extension.</p>
+<p>This also applies if the file is newer than the bytecode file.</p>
+<p>Berry VM can be restarted with the ‘brrestart’ console command</p>
+<p> </p>
+</body>
+</html>

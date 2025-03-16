@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 7</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text5.html">Back</a> <a href="text7.html">Continue</a> <a href="text20.html">Last page</a> <a href="EO2024-Tasmota+Berry.html">Overview</a> <a href="img6.html">Image</a></center><br>
+<h1>Commands and Rules</h1>
+<ul>
+<li>Command</li>
+<li>Rule
+
+</li>
+<li>There are other triggers depending on the peripherals configured
+</li>
+</ul>
+<p>POWER1 ON</p>
+<p>websend [192.23.1.20] power1 0</p>
+<p>ON POWER1#STATE=1 DO RULETIMER1 600 ENDON</p>
+<p>ON RULES#TIMER=1 DO POWER1 0 ENDON</p>
+<p>ON ANALOG#A0div10 DO DIMMER %value% ENDON</p>
+<br>
+<h3>Notes:</h3>
+<p>In the command example. Assuming a relay has been configured.
+POWER1 ON turns on the first relay</p>
+<p>Using websend allows peer to peer commands</p>
+<p></p>
+<p>An example rule</p>
+<p>When POWER1 is turned on a timer is loaded with 600 (seconds)</p>
+<p>When the timer expires the relay is turned off</p>
+<p></p>
+<p>When ANALOG A0 changes more than 1% adjust the dimmer by the returned value</p>
+<p></p>
+<p>These examples do not need anything else to operate.</p>
+</body>
+</html>

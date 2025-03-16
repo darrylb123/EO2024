@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 15</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text13.html">Back</a> <a href="text15.html">Continue</a> <a href="text20.html">Last page</a> <a href="EO2024-Tasmota+Berry.html">Overview</a> <a href="img14.html">Image</a></center><br>
+<h1>Tasmota Module (Driver)</h1>
+<ul>
+<li>Berry can be used to add device drivers</li>
+<li>Override driver class methods as required</li>
+<li>Add fast_loop() to Tasmota main loop</li>
+<ul>
+<li>fast_loop function called 200 times/sec </li>
+</ul>
+</ul>
+<p>class MyDriver</p>
+<p>  def every_second()</p>
+<p>    # do something</p>
+<p>  end</p>
+<p>end</p>
+<p>d1 = MyDriver()</p>
+<p>tasmota.add_driver(d1)</p>
+<br>
+<h3>Notes:</h3>
+<p>Class methods include</p>
+<p>every_second()</p>
+<p>every_250ms()</p>
+<p>every_100ms()</p>
+<p></p>
+<p></p>
+<p>fast_loop() needs to be registered separately</p>
+<p></p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 14</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text12.html">Back</a> <a href="text14.html">Continue</a> <a href="text20.html">Last page</a> <a href="EO2024-Tasmota+Berry.html">Overview</a> <a href="img13.html">Image</a></center><br>
+<h1>Tasmota module</h1>
+<ul>
+<li>add_rule() </li>
+<li>read_sensors()</li>
+<li>get_power() / set_power() / get_switches()</li>
+<li>url_get()</li>
+<li>rtc()/time_str()</li>
+<li>Web interface functions</li>
+<li>...</li>
+</ul>
+<br>
+<h3>Notes:</h3>
+<p>Poorly written Berry programs can take prevent Tasmota performing the other functions, so an event mechanism is required. We saw time based events previously.</p>
+<p></p>
+<p>The add_rule() method is very powerful. It allows a tasmota event to trigger a berry function. This is the most efficient way to wait on IO. The triggers are exactly the same as Rule triggers discussed earlier.</p>
+<p></p>
+<p>read_sensors() polls configured sensors</p>
+<p></p>
+<p>Polling and setting digital IO</p>
+<p></p>
+<p>Url retrieval</p>
+<p></p>
+<p>Time functions. Tasmota uses NTP for real time setting, so requires access to an NTP server for wall clock time.</p>
+<p></p>
+<p>Functions to add features to the Tasmota web interface</p>
+</body>
+</html>
